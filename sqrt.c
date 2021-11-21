@@ -22,4 +22,8 @@ int mySqrt(int x){
     }
     
    return ans;
-}
+}     
+int main(){
+    int s=mySqrt(17);
+   printf("%d",s) ;
+}            
