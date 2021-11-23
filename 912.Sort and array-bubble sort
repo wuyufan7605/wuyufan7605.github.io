@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+//兩數字交換函式
+void swap(int *xp,int *yp){
+    int temp=* xp;
+    *xp=*yp;
+    *yp=temp;
+}
+
+//兩兩相比,把大的換到後面
+void BubbleSort(int nums[],int n){
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-1-i;j++){
+            if(nums[j]>nums[j+1]){
+                swap(&nums[j],&nums[j+1]);
+            }
+        }
+    }
+}
+
+
+void printArray(int nums[], int size)
+{
+    int i;
+    for (i=0; i < size; i++)
+        printf("%d ", nums[i]);
+    printf("\n");
+}
+ 
+int main()
+{
+    int nums[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(nums)/sizeof(nums[0]);
+    BubbleSort(nums, n);
+    printf("Sorted array: \n");
+    printArray(nums, n);
+    return 0;
+}
