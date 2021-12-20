@@ -21,8 +21,8 @@ class Solution:
                         #就加到q及visit(已經拜訪過的)中
                         q.append((tx,ty))
                         visit.add((tx,ty))
-                #回傳拜訪過的個數,即為島的長度
-                return len(visit)
+             #回傳拜訪過的個數,即為島的長度
+             return len(visit)
                         
                     
         #求出矩陣的長跟寬一樣
