@@ -1,6 +1,5 @@
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-        #使用collections.defaultdict就不用擔心沒有key值,系統會塞預設值進去key,程式碼會比較簡潔
         edges=collections.defaultdict(list)
         #把所有的路徑存進edges中
         for u,v,w in times:
@@ -28,6 +27,8 @@ class Solution:
                 if nei not in visit:
                     #把weight放前面,因為要選weight最小者
                     heapq.heappush(minHeap,(w1+nei_weight,nei))
-        return cur_path 
+        #因為題目說要每個節點都拜訪到
+        #所以如果沒有,就回傳-1
+        return cur_path if len(visit)==n else -1
             
             
