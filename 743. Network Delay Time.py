@@ -1,5 +1,6 @@
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+        #使用collections.defaultdict就不用擔心沒有key值,系統會塞預設值進去key,程式碼會比較簡潔
         edges=collections.defaultdict(list)
         #把所有的路徑存進edges中
         for u,v,w in times:
