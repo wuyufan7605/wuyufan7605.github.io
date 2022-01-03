@@ -29,6 +29,7 @@ public:
         //算每個點的高度
         return 1+max(leftSubTree,rightSubTree);
     }
+    
     //這邊為主程式
     //一開始設有平衡
     //若不符合再改成false
