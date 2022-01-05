@@ -6,6 +6,7 @@ public:
         if((a%b)==0) return b;
         else return gcd(b,a%b);
     }
+    
     //主程式
     int findGCD(vector<int>& nums) {
         //排序輸入的數字
